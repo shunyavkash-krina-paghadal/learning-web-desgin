@@ -1,0 +1,58 @@
+@media(max-width:1199px) {
+    .w-xl-1{
+        width: 100%;
+    }
+    .about-img img{
+        width: 100%;
+      
+    }
+    .about-img{
+        margin-left:0;
+    }
+}
+
+@media (max-width:575px){
+    .toggle{
+        display: block;
+        color: aliceblue;
+    }
+    .topbar{
+		display: none;
+	}
+	
+	.navigation{
+		transform: translateY(0);
+		padding: 0;
+    
+		
+	}
+	.navigation nav{
+		display: none;
+		text-align: left!important;
+		padding: 0;
+	}
+    .navigation li{
+        color: black;
+        padding: 10px 0;
+    }
+
+	
+	
+	.navigation nav ul{
+		flex-direction: column;
+		top: 104%;
+		left:0;
+		position: absolute;
+		transition: 0.4s all;
+		background-color:aliceblue;
+		box-shadow: inset;
+		justify-content: flex-start;
+		text-align: left;
+		right: 0;
+        z-index: -1;
+	}
+
+	
+
+	
+}
