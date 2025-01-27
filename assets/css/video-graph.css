@@ -28,6 +28,10 @@ a{
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* HEADER */
+
+
 header{
     padding:30px 0;
     position: relative;
@@ -80,8 +84,8 @@ header{
     top: 0;
     height: 30px;
     width: 30px;
-    border-left: 2px solid #00bfe7;
-    border-top: 2px solid #00bfe7;
+    border-left: 2px solid aliceblue;
+    border-top: 2px solid aliceblue;
     content: "";
     z-index: -1;
     -webkit-transition: all, 0.7s;
@@ -95,8 +99,8 @@ header{
     bottom: 0;
     height: 30px;
     width: 30px;
-    border-right: 2px solid #00bfe7;
-    border-bottom: 2px solid #00bfe7;
+    border-right: 2px solid aliceblue;
+    border-bottom: 2px solid aliceblue;
     content: "";
     z-index: -1;
     -webkit-transition: all, 0.7s;
@@ -104,7 +108,7 @@ header{
     transition: all, 0.7s;
 }
 .navigation nav ul li:first-child a{
-    border-bottom: 2px solid #00bfe7;
+    border-bottom: 2px solid aliceblue;
     padding-bottom: 10px;
 }
 .btn1:hover::after ,.btn:hover::after{
@@ -166,12 +170,15 @@ header{
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(2, auto);  
-    /* gap: 10px;  */
+    gap: 10px; 
+    margin: 40px 0;
   }
   
   .grid-item {
     position: relative;
     overflow: hidden;
+
+   
     
   }
   
@@ -180,6 +187,11 @@ header{
     height: 100%;
     object-fit: cover; 
     transform: scale(1.5);
+
+  }
+  .grid-item img:hover{
+    transform: scale(1.4);
+    filter: grayscale(80%);
   }
   .grid-item img:hover{
   transition: 0.4s all ease-in-out;
@@ -193,31 +205,3 @@ header{
     grid-column:1 span 2; 
     grid-row: span 2;   
   }
-  .project-overlay{
-	width:100%;
-	height:0;
-	background-color:rgba(55,87,247,0.6);
-	position:absolute;
-	top:0;
-	left:0;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	opacity:0;
-	transition:0.4s;
-	flex-direction:column;
-    z-index: 999;
-	
-}
-.projects-items:hover .project-overlay{
-	height:100%;
-	opacity:1;
-}
-.project-overlay h3{
-	color:var(--theme-white);
-	font-size:26px;
-}
-.project-overlay i{
-	color:var(--theme-white);
-	font-size:30px;
-}

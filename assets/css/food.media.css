@@ -1,0 +1,132 @@
+@media (max-width:1099px) {
+    .icons{
+        display: none;
+    }
+}
+@media (max-width:620px) {
+   nav{
+    display: none;
+   }
+}
+@media (max-width:800px) {
+    nav{
+     display: none;
+    }
+
+    .about-inner{
+      display: grid;
+      gap: 30px;
+      grid-template-rows:repeat(1 , 1fr);
+    }
+    .about-content{
+        text-align: left;
+    }
+ }
+@media (max-width:919px) {
+    nav{
+     display: none;
+    }
+    
+    .content h1{
+        font-weight: 500;
+        color: aliceblue;
+        font-size: 30px;
+        padding: 20px 0;
+        letter-spacing: 1.5px;
+    }
+    .content h3{
+        font-weight: 300;
+        color: aliceblue;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        /* padding: 30px 0; */
+    }
+    .content a{
+        font-weight: 300;
+        color: white;
+        font-size:17px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        letter-spacing: 1.5px;
+    }
+ }
+ 
+
+@media (max-width:967px) {
+    .w-lg-2{
+        width: 50%;
+    }
+    .second-item{
+      margin-top: 20px;
+    }
+}
+@media (max-width:595px){
+    .w-xs-1{
+        width: 100%;
+    }
+    .toggle{
+        display: block;
+        color: rgb(11, 12, 13);
+    }
+    .topbar{
+		display: none;
+	}
+   
+	
+	.navigation{
+		transform: translateY(0);
+		padding: 0;
+    
+		
+	}
+	.navigation nav{
+		display: none;
+		text-align: left!important;
+		padding: 0;
+	}
+    .navigation li a{
+        color: rgb(10, 9, 9);
+       
+       
+    }
+    .navigation li{
+        padding: 10px 0;
+    }
+
+	.swiper-slide{
+        width: 100%;
+        height: 100%;
+    }
+	
+	.navigation nav ul{
+		flex-direction: column;
+		top: 104%;
+		left:0;
+		position: absolute;
+		transition: 0.4s all;
+		background-color:aliceblue;
+		box-shadow: inset;
+		justify-content: flex-start;
+		text-align: left;
+        margin: 10px 0;
+		right: 0;
+        z-index: -1;
+	}
+
+	.first-item{
+        margin-top:20px;
+    }
+
+	
+}
+@media (max-width:525px) {
+    .sign-up-content{
+        text-align: center;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .sign-up-content h4{
+        margin-bottom: 20px;
+    }
+}
