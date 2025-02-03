@@ -1,4 +1,4 @@
-@media (max-width:1099px) {
+@media (max-width:770px) {
     .icons{
         display: none;
     }
@@ -71,7 +71,13 @@
     .topbar{
 		display: none;
 	}
-   
+    .icons {
+        display: block;
+        /* flex-direction: column;
+        display: flex; */
+        margin-left: 15px;
+        padding-top: 10px;
+    }
 	
 	.navigation{
 		transform: translateY(0);
@@ -100,7 +106,7 @@
 	
 	.navigation nav ul{
 		flex-direction: column;
-		top: 104%;
+		top: 140%;
 		left:0;
 		position: absolute;
 		transition: 0.4s all;
@@ -128,5 +134,15 @@
     }
     .sign-up-content h4{
         margin-bottom: 20px;
+    }
+}
+@media (max-width:360px) {
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-family: swiper-icons;
+        font-size: var(--swiper-navigation-size);
+        text-transform: none !important;
+        letter-spacing: 0;
+        font-variant: initial;
+        line-height: 1;
     }
 }

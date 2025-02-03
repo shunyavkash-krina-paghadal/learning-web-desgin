@@ -3,15 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --swiper-navigation-size:20px;
+}
 body{
     font-family: 'Tomorrow';  
 }
 .d-flex{
     display: flex;
 }
-/* .w-2{
-    width: 50%;
-} */
+
 ul ,li{
     list-style: none;
 }
@@ -79,7 +80,7 @@ a{
     top: 0;
     height: 30px;
     width: 30px;
-    border-left: 2px solid aliceblue;
+    border-left: 2px solid red;
     border-top: 2px solid aliceblue;
     content: "";
     z-index: -1;
@@ -94,7 +95,7 @@ a{
     bottom: 0;
     height: 30px;
     width: 30px;
-    border-right: 2px solid aliceblue;
+    border-right: 2px solid red;
     border-bottom: 2px solid aliceblue;
     content: "";
     z-index: -1;
@@ -140,15 +141,25 @@ nav li a{
     margin: 0 20px;
     color: rgb(14, 15, 16);
     font-weight: 400;
-    transition:all 0.3s ease-in-out;
+    transition: 0.3s all ease-in-out;
     
 }
 nav li a:hover{
    border-bottom: 2px solid red;
+   transition: 0.3s all ease-in-out;
    padding-bottom: 10px;
 }
 .toggle{
     display: none;
+}
+.icons a{
+    color: #222222;
+    margin-right: 10px;
+    transition: 0.4s all ;
+    
+}
+.icons a:hover{
+    color: #d61c22;
 }
 
 /* SLIDER */
@@ -166,6 +177,7 @@ nav li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-in-out;
   }
 
   .swiper-slide img {
@@ -173,6 +185,7 @@ nav li a:hover{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
   }
 
 .swiper-pagination{
@@ -182,11 +195,24 @@ nav li a:hover{
 }
 .swiper-button-next{
     color: #b3a8a9;
+  
 } 
-.swiper-button-prev{
-    color: #b3a8a9;
-      
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size:44px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    color: #999393;
+    border-radius: 50%;
 }
+.swiper-button-prev:after{
+    opacity:0.6;
+    color: #999393;
+}
+
 .banner-items{
     position: relative;
 }
@@ -238,7 +264,7 @@ nav li a:hover{
     max-width: 390px;
     overflow: hidden;
     display: block;
-    transition:all 0.3s ease-in-out;
+    transition:all 0.4s ease-in-out;
     border-radius: 50px;
 }
 .about-img{
@@ -246,7 +272,8 @@ nav li a:hover{
     border-radius: 50px;
 }
 .about-img img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
+    transition:all 0.4s ease-in-out;
 }
 .about-inner{
     display: flex;
@@ -343,7 +370,7 @@ nav li a:hover{
     padding: 90px  0;
 }
 .foods-items{
-    box-shadow: rgba(17, 11, 11, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(17, 11, 11, 0.24) 0px 3px 8px; */
     border-radius: 10px;
    margin:0 17px 0 0 ;
 }
@@ -358,10 +385,11 @@ nav li a:hover{
     overflow: hidden;   
 }
 .foods-img img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 .foods-content{
-    padding: 30px 25px;
+    padding:10px 0;
 }
 .foods-content  a:first-child {
        font-size: 26px;
@@ -376,10 +404,9 @@ nav li a:hover{
     color: rgb(109, 104, 104); 
     font-weight: 300;
     line-height: 30px;
-    font-size: 19px;
-    word-spacing:10px;
+    font-size: 16px;
     padding: 10px 0 20px  0;
-    letter-spacing: 2px;
+    letter-spacing:2px;
 }
 .foods-content a:last-child{
     color: rgb(45, 44, 44);
@@ -387,7 +414,12 @@ nav li a:hover{
     transition: all 0.3s ease-in-out;
 }
 .foods-content  a:last-child:hover {
-    color: red;
+    color: white;
+    background-color: rgb(201, 32, 32);
+    padding: 10px 19px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+
 }
 
 
@@ -462,7 +494,7 @@ nav li a:hover{
     padding: 90px  0;
 }
 .blogs-items{
-    /* box-shadow: rgba(17, 11, 11, 0.24) 0px 3px 8px; */
+   
     border-radius: 10px;
    margin:0 17px 0 0 ;
    position: relative;  
@@ -502,8 +534,9 @@ nav li a:hover{
 
 }
 .blogs-img img:hover{
-    transform: scale(1.5);
-    filter: grayscale(80%);
+    transform: scale(1.1);
+    filter: grayscale(2 0%);
+    transition: all 0.3s ease-in-out;
 }
 .blogs-content{
     padding: 10px 0;

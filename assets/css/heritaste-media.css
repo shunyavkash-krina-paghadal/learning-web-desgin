@@ -1,0 +1,14 @@
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  @media screen and (max-height: 1230px) {
+     .list{
+        display: none;
+    }
+  }
+  @media screen and (max-height:500px) {
+    .icons,.icons-2{
+       display: none;
+   }
+ }
