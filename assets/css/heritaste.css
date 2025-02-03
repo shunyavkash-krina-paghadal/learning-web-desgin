@@ -32,12 +32,17 @@ ul{
 .d-none{
     display: none;
 }
-
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffe4c4;
+    color: #FFFFFF;
+    padding: 3rem 20px;
+}
 .d-flex{
     display: flex;
 }
-
-
 
 nav ul li a{
     color: black;
@@ -153,10 +158,10 @@ nav ul li a:hover , .icons a:hover,.icons-2 a:hover{
 .banner{
     background-image: url(../../assets/imges/banner-3-heri.jpg);
     width: 100%;
-    height: 100%;
     background-position: center;
     background-size: cover;
     position: absolute;
+    min-height: 100vh;
 
 }
 .banner::after{
@@ -169,4 +174,100 @@ left: 0px;
 bottom: 0px;
 right: 0px;
 z-index: 1;
+
+}
+.banner-section{
+    background-image: url(../../assets/imges/shape-2-heri.png);
+    position: absolute;
+    top: 150px;
+    right: 300px;
+    width: 196px;
+    height: 100px;
+    background-repeat: no-repeat;
+    z-index: 999;
+    animation: shape 3000ms;
+    animation-iteration-count: infinite;
+    transition: 0.3s all ease-in-out;
+
+   
+}
+@keyframes shape  {
+    0%{
+       transform: translateY(10%);
+    }
+    50%{
+       transform: translateY(30%);
+    }
+    100%{
+       transform: translateY(10%);
+    }
+}
+  
+
+  .banner-content h3{
+    /* position: relative; */
+    display: inline-block;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 500;
+    z-index: 999;
+     color: #fff;
+    font-family: 'Just Another Hand', cursive; 
+    margin-bottom: 9px;
+
+  }
+  .banner-content{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    z-index: 999;
+  }
+  .banner-content P{
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 30px;
+    z-index: 999;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing:2px;
+    text-align: center;
+
+  }
+  .banner-content h1{
+    padding: 20px 0;
+    font-size: 55px;
+    color:white;
+    z-index: 9;
+    font-weight:500;
+  }
+  .banner-content .ri-octagon-line{
+    color: #d06a22;
+    margin:0 8px;
+  }
+  .shape-3{
+    background-image: url(../../assets/imges/shape-3-heri.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom:15%;
+    right:20%;
+    width: 196px;
+    height: 100px;
+    background-repeat: no-repeat;
+    z-index: 999;
+    animation:shape2 4000ms;
+    animation-iteration-count: infinite;
+    transition: 0.3s all ease-in-out;
+  }
+  @keyframes shape2 {
+    0%{
+       transform: translateY(10%);
+    }
+    50%{
+       transform: translateY(30%);
+    }
+    100%{
+       transform: translateY(10%);
+    }
 }

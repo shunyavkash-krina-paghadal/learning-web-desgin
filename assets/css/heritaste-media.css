@@ -1,14 +1,28 @@
-@media screen and (max-height: 450px) {
+@media (max-width: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-  @media screen and (max-height: 1230px) {
+  @media(max-width: 1230px) {
      .list{
         display: none;
     }
   }
-  @media screen and (max-height:500px) {
-    .icons,.icons-2{
+  @media (max-width:666px) {
+    .navbar .icons , .icons-2{
        display: none;
    }
+   .sidenav{
+
+    z-index:3;
+   }
+ }  
+
+ @media (max-width:490px) {
+    .bannner-section{
+     position: absolute;
+     top: 15px;
+     right:160px;
+     width: 106px;
+     height: 100px;
+    }
  }
