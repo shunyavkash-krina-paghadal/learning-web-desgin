@@ -149,7 +149,7 @@ nav li a:hover{
    transition: 0.3s all ease-in-out;
    padding-bottom: 10px;
 }
-.toggle{
+.toggle  a{
     display: none;
 }
 .icons a{
