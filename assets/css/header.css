@@ -1,0 +1,133 @@
+header {
+  padding: 20px 0;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+}
+.header-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo img {
+  width: 180px;
+  max-width: 100%;
+}
+.header-items nav {
+  background-color: var(--bg-shadow);
+  border: 2px solid var(--border-color);
+  border-radius: 35px;
+  padding: 0 30px;
+}
+.header-items nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-items nav ul li a {
+  color: var(--text-color);
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: 0.3s all ease-in-out;
+}
+
+.theme-btn {
+  background: var(--gradient);
+  padding: 13px 30px;
+  border-radius: 25px;
+  transition: 0.3s all ease-in-out;
+}
+
+.theme-btn a {
+  color: var(--white);
+  font-weight: 900;
+}
+.theme-btn:hover {
+  background: linear-gradient(to left, #4185dd 0%, #b42fda 100%);
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  background: var(--gradient);
+  padding: 10px;
+  width: 140px;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  border-radius: 20px;
+}
+.dropdown ol {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+li.relative:hover .dropdown {
+  opacity: 1;
+}
+.dropdown ol a {
+  transition: 0.3s all ease-in-out;
+}
+.dropdown ol a:hover {
+  padding-left: 10px;
+}
+
+.close-icons {
+  color: var(--white);
+  background:var(--gradient);
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.close-icons:hover {
+  background-color: var(--purple);
+  transform: rotate(180deg);
+}
+.menu {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+.report {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000b3;
+  display: flex;
+  justify-content: flex-start;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+.reports-contents {
+  background-color: var(--white);
+  width: 80%;
+  max-width: 350px;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding: 80px 20px;
+  overflow-y: auto;
+}
+.report.show {
+  visibility: visible;
+  opacity: 1;
+}
+.report.show .reports-contents {
+  transform: translateX(0%);
+}

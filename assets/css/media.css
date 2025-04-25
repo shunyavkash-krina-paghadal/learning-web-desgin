@@ -1,0 +1,11 @@
+@media screen and (max-width: 1024px) {
+  .header-items nav ul {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header-items nav {
+    display: none;
+  }
+}
