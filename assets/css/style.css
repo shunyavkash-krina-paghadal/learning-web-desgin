@@ -32,19 +32,19 @@ a {
 img {
   display: block;
 }
-.relative{
-    position: relative;
+.relative {
+  position: relative;
 }
 /* Hero section */
 .hero-sec {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  background: url(../img/background/hero-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 250px 0 140px;
+  z-index: 1;
 }
+
 .hero-sec::before {
   content: "";
   display: block;
@@ -57,10 +57,70 @@ img {
   opacity: 90%;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 9999;
 }
-.hero-sec video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-items {
+  position: relative;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-items a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  background-position: left 20px center;
+  background-size: 20px auto;
+  border-left: 1px solid #4185dd;
+  border-right: 1px solid #b42fda;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 100px;
+  padding: 8px 25px 8px 25px;
+  background-color: var(--bg-shadow);
+}
+.hero-items a h5 {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  font-size: 16px;
+}
+.hero-items a svg {
+  width: 24px;
+  height: 24px;
+  color: transparent;
+  background: var(--gradient);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" stroke="black" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"/><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"/><path d="M8 11v-4a4 4 0 1 1 8 0v4"/></svg>');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: same-as-above;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+.hero-text {
+  color: var(--white);
+  font-size: 52px;
+  max-width: 950px;
+  margin-inline: auto;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.hero-text span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.hero-richtext {
+  color: var(--text-color);
+  max-width: 780px;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
 }
